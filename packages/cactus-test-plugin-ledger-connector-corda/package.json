@@ -1,11 +1,11 @@
 {
-  "name": "@hyperledger/cactus-test-tooling",
+  "name": "@hyperledger/cactus-test-plugin-ledger-connector-corda",
   "version": "0.2.0",
-  "description": "Swiss army knife for test development. Main goal is to make pulling up test/dummy ledgers on the fly for tests easy, especially for test cases that are about simulating clean ledger state or wiped ledger state, etc.",
-  "main": "dist/cactus-test-tooling.node.umd.js",
-  "mainMinified": "dist/cactus-test-tooling.node.umd.min.js",
-  "browser": "dist/cactus-test-tooling.web.umd.js",
-  "browserMinified": "dist/cactus-test-tooling.web.umd.min.js",
+  "description": "Integration tests for the Corda ledger and the API server.",
+  "main": "dist/cactus-test-plugin-ledger-connector-corda-corda.node.umd.js",
+  "mainMinified": "dist/cactus-test-plugin-ledger-connector-corda-corda.node.umd.min.js",
+  "browser": "dist/cactus-test-plugin-ledger-connector-corda-corda.web.umd.js",
+  "browserMinified": "dist/cactus-test-plugin-ledger-connector-corda-corda.web.umd.min.js",
   "module": "dist/lib/main/typescript/index.js",
   "types": "dist/types/main/typescript/index.d.ts",
   "files": [
@@ -62,28 +62,24 @@
   },
   "homepage": "https://github.com/hyperledger/cactus#readme",
   "dependencies": {
+    "@hyperledger/cactus-cmd-api-server": "^0.2.0",
     "@hyperledger/cactus-common": "0.2.0",
+    "@hyperledger/cactus-core-api": "^0.2.0",
+    "@hyperledger/cactus-plugin-kv-storage-memory": "0.2.0",
+    "@hyperledger/cactus-plugin-ledger-connector-corda": "^0.2.0",
+    "@hyperledger/cactus-api-client": "0.2.0",
+    "@hyperledger/cactus-test-tooling": "0.2.0",
     "axios": "0.19.2",
-    "dockerode": "3.2.0",
-    "extract-zip": "2.0.0",
-    "fabric-client": "1.4.11",
-    "fs-extra": "9.0.0",
-    "is-port-reachable": "3.0.0",
+    "axios-retry": "3.1.9",
     "joi": "14.3.1",
-    "loglevel": "1.6.7",
-    "loglevel-plugin-prefix": "0.8.4",
-    "node-ssh": "11.1.0",
-    "tar-stream": "2.1.2",
+    "node-ssh": "^11.0.0",
     "typescript-optional": "2.0.1",
-    "web3": "1.2.7"
+    "web3": "1.2.7",
+    "web3-eth-contract": "1.2.7",
+    "web3-utils": "1.2.7"
   },
   "devDependencies": {
-    "@types/dockerode": "2.5.28",
-    "@types/extract-zip": "1.6.2",
-    "@types/fs-extra": "8.1.0",
     "@types/joi": "14.3.4",
-    "@types/ssh2": "0.5.44",
-    "@types/node-ssh": "7.0.0",
-    "@types/tar-stream": "2.1.0"
+    "@types/node-ssh": "7.0.0"
   }
 }
